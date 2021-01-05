@@ -1,6 +1,8 @@
+import "./App.css";
+import ToDoList from "./ToDoList";
 import {useState} from 'react';
 import NewTodoForm from './NewTodoForm'
-import './App.css';
+
 
 function App() {
   const defaultTodos = ['First To Do', 'Second To Do', 'Third To Do', 'Fourth To Do', 'Fifth To Do', 'Sixth To Do']
@@ -9,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <NewTodoForm />
-      Hello World
+      <ToDoList todos={todos} />
     </div>
   );
 }
