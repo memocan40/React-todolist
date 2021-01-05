@@ -7,7 +7,7 @@ const NewTodoForm = () => {
 
     return (
         <form>
-            <input placeholder="Add a new task" onChange={}></input>
+            <input placeholder="Add a new task"></input>
             <button>Add</button>
         </form>
     )
