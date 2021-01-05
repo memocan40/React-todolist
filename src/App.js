@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import NewTodoForm from './NewTodoForm'
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
 
   return (
     <div className="App">
+      <NewTodoForm />
       Hello World
     </div>
   );
