@@ -6,6 +6,6 @@ export default function Todo({todotitle}){
 
 
     return(
-        <div className="todo">test{todotitle}</div>
+        <div className="todo">{todotitle}</div>
     )
 }
