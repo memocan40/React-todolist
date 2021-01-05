@@ -1,12 +1,12 @@
-import ToDo from "../ToDo";
+import Todo from "../Todo";
 import React, { useState } from "react";
 
 const ToDoList = ({ todos }) => {
   return (
     <div>
-      {todos.map((iteration) => (
-        <Todo todotitle={iteration.text} />
-      ))}
+      {todos.map((iteration) => {
+        return<Todo todotitle={iteration} />
+      })}
     </div>
   );
 };
