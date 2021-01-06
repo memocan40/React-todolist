@@ -7,16 +7,22 @@ import NewTodoForm from './NewTodoForm'
 function App() {
   
   let [todos, setTodos] = useState([])
+  
   const updateTodo = (newToDo) => {
     setTodos([...todos, newToDo])
   } 
   
-  console.log(todos)
-
+  const removeTask = (index) => {
+    console.log('before', todos)
+    todos.splice(index, 1);
+    setTodos([...todos]);
+    console.log('After', todos)
+  }
+  
   return (
     <div className="App">
       <NewTodoForm setNewTodo={(newToDo) => updateTodo(newToDo)}/>
-      <ToDoList todos={todos} />
+      <ToDoList todos={todos} setDeleteIndex={removeTask} />
     </div>
   );
 }
