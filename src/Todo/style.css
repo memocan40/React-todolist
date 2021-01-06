@@ -1,5 +1,9 @@
-.todo{
-    font-size:20px;
-    font-style: italic;
-    
+.todo {
+  font-size: 20px;
+  font-style: italic;
+  display: flex;
+  width: 100%;
+}
+.done {
+  text-decoration: line-through;
 }
