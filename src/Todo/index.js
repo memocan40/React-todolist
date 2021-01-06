@@ -5,7 +5,7 @@ export default function Todo({todo,index,setDeleteIndex}){
 const handleClick=(event)=>{
     event.preventDefault();
     setDeleteIndex(index);
-    event.target.parentNode.remove();
+    // event.target.parentNode.remove();
 }
 
 
