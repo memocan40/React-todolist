@@ -5,12 +5,17 @@ import NewTodoForm from './NewTodoForm'
 
 
 function App() {
-  const defaultTodos = ['First To Do', 'Second To Do', 'Third To Do', 'Fourth To Do', 'Fifth To Do', 'Sixth To Do']
-  let [todos, setTodos] = useState(defaultTodos)
+  
+  let [todos, setTodos] = useState([])
+  const updateTodo = (newToDo) => {
+    setTodos([...todos, newToDo])
+  } 
+  
+  console.log(todos)
 
   return (
     <div className="App">
-      <NewTodoForm />
+      <NewTodoForm setNewTodo={(newToDo) => updateTodo(newToDo)}/>
       <ToDoList todos={todos} />
     </div>
   );
