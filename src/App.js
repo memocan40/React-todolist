@@ -28,6 +28,7 @@ function App() {
     <div className="App">
       <NewTodoForm setNewTodo={(newToDo) => updateTodo(newToDo)} />
       <ToDoList
+      
         todos={todos}
         setDeleteIndex={removeTask}
         setCompleteIndex={markAsDone}

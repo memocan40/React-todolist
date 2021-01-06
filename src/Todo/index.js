@@ -7,8 +7,13 @@ export default function Todo({
   setCompleteIndex,
 }) {
   const removeToDo = (event) => {
+    event.target.parentNode.style.opacity="0"
+    event.target.parentNode.style.transition="1s";
+    setTimeout(() => {
+      
+    
     event.preventDefault();
-    setDeleteIndex(index);
+    setDeleteIndex(index);},1000);
     // event.target.parentNode.remove();
   };
   const markAsDone = () => {
@@ -18,10 +23,12 @@ export default function Todo({
 
   return (
     <div className="todo">
+      
       <p className={todo.done ? "done" : "notDone"} onClick={markAsDone}>
         {todo.title}
       </p>
-      <button onClick={removeToDo}>X</button>{" "}
+      <button className="buttond" onClick={removeToDo }></button>{" "}
+      
     </div>
   );
 }

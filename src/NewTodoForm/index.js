@@ -8,16 +8,19 @@ const NewTodoForm = ({ setNewTodo }) => {
     const handleClick = userInput => (e) => {
         e.preventDefault();
         const newTask = {
+            
             title: userInput,
             done: false
         }
+        
+        
         setNewTodo(newTask);
         setUserInput("");
       };
 
     return (
         <form>
-            <input value={userInput} placeholder="Add a new task" onChange={(e) => setUserInput(e.target.value) }></input>
+            <input className="inputfield" value={userInput} placeholder="Add a new task" onChange={(e) => setUserInput(e.target.value) }></input>
             <button onClick={handleClick(userInput)}>Add</button>
         </form>
     )
