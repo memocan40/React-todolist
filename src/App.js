@@ -12,11 +12,17 @@ function App() {
   } 
   
   console.log(todos)
-
+  const removeTask=(index)=>{
+    console.log(index);
+    todos.splice(index,1);
+    setTodos(todos);
+    console.log(todos);
+  }
+  
   return (
     <div className="App">
       <NewTodoForm setNewTodo={(newToDo) => updateTodo(newToDo)}/>
-      <ToDoList todos={todos} />
+      <ToDoList todos={todos} setDeleteIndex={removeTask} />
     </div>
   );
 }

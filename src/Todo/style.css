@@ -1,5 +1,6 @@
 .todo{
     font-size:20px;
     font-style: italic;
-    
+    display:flex;
+    width:100%;
 }
