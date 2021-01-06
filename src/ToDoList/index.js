@@ -4,8 +4,8 @@ import React, { useState } from "react";
 const ToDoList = ({ todos }) => {
   return (
     <div>
-      {todos.map((iteration) => {
-        return<Todo todotitle={iteration} />
+      {todos.map((todo) => {
+        return<Todo todotitle={todo.title} />
       })}
     </div>
   );
