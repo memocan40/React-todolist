@@ -1,7 +1,34 @@
+@keyframes animat{
+  from{opacity:0}
+  to{opacity:4}
+}
+
+
 .todo {
-  font-size: 20px;
+  font-size: 25px;
   font-style: italic;
   display: flex;
+  margin-top:0.5em;
+  width: 70vw;
+  animation-name: animat;
+  animation-duration:1s;
+  animation-iteration-count: 1;
+  
+}
+@keyframes opacity{
+  from{opacity:4}
+  to{opacity:0}
+}
+.opacity{
+  animation-name:x;
+  animation-duration:1s;
+  animation-iteration-count:1;
+  
+}
+
+.done {
+  
+
   width: 35vw;
   margin-bottom: 10px;
 }
@@ -14,9 +41,12 @@
   background-color: #ffc8ff;
   padding: 0 10px;
   opacity: 0.5;
+  border-radius:10px;
 }
 
+
 .notDone {
+  border-radius:10px;
   width: 100%;
   margin-right: 10px;
   border: black 1px solid;
@@ -29,4 +59,19 @@
 }
 .done:hover {
   background-color: #93ffc1;
+}
+
+.buttond{
+  
+  background-image:url(https://cdn.dribbble.com/users/2124240/screenshots/6118828/delete_icon_intraction.gif);
+  background-size:cover;
+  border-radius:10px;
+  margin-left:10px;
+  
+}
+.buttond:hover{
+ background-color:black!important;
+ color:white;
+ 
+ 
 }

@@ -4,7 +4,9 @@ const ToDoList = ({ todos, setDeleteIndex, setCompleteIndex }) => {
 
 
   return (
+    
     <div>
+    
       {todos.map((todo, index) => {
         return (
           <Todo

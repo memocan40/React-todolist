@@ -7,12 +7,33 @@ export default function Todo({
   setCompleteIndex,
 }) {
 
+  const removeToDo = (event) => {
+    event.target.parentNode.classList.add("opacity");
+    
+    
+    
+    setTimeout(() => {
+      
+    event.target.parentNode.classList.remove("opacity")
+    event.preventDefault();
+    setDeleteIndex(index);},1000);
+    console.log(index)
+    
+  };
+  const markAsDone = () => {
+    setCompleteIndex(index);
+    
+  };
+
   return (
     <div className="todo">
-      <p className={todo.done ? "done" : "notDone"} onClick={() => setCompleteIndex(index)}>
+      
+      <p className={todo.done ? "done" : "notDone"} onClick={markAsDone}>
         {todo.title}
       </p>
-      <button onClick={() => setDeleteIndex(index)}>X</button>{" "}
+      <button className="buttond" onMouseOver={(event)=>{event.target.innerHTML="X"}} onMouseLeave={(event)=>{event.target.innerHTML=""}}  onClick={removeToDo }></button>{" "}
+      
+
     </div>
   );
 }

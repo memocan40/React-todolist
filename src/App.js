@@ -22,15 +22,19 @@ function App() {
 
   return (
     <div className="App">
+
+      <h1>THE AMAZING TODO-LIST</h1>
+     
+
       <NewTodoForm setNewTodo={updateTodo} />
+
       <ToDoList
+      
         todos={todos}
         setDeleteIndex={(index) => removeTask(index)}
         setCompleteIndex={(index) => markAsDone(index)}
       />
-      <h1>THE</h1>
-      <h1>AMAZING</h1>
-      <h1>TO-DO-LIST</h1>
+      
     </div>
   );
 }
