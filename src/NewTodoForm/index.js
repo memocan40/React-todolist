@@ -10,12 +10,9 @@ const NewTodoForm = ({ setNewTodo }) => {
 
         e.preventDefault();
         const newTask = {
-            
             title: userInput,
             done: false
-        }
-        
-        
+        } 
         setNewTodo(newTask);
         setUserInput("");
       };
@@ -24,7 +21,7 @@ const NewTodoForm = ({ setNewTodo }) => {
         <form>
 
             <input className="inputfield" value={userInput} placeholder="Add a new task" onChange={(e) => setUserInput(e.target.value) }></input>
-            <button onClick={handleClick(userInput)}>Add</button>
+            <button onClick={handleClick}>Add</button>
 
         </form>
     )

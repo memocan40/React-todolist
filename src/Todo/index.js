@@ -9,14 +9,13 @@ export default function Todo({
 
   const removeToDo = (event) => {
     event.target.parentNode.classList.add("opacity");
-    
-    
-    
-    setTimeout(() => {
-      
-    event.target.parentNode.classList.remove("opacity")
-    event.preventDefault();
-    setDeleteIndex(index);},1000);
+  
+    setTimeout(() => { 
+      event.target.parentNode.classList.remove("opacity")
+      event.preventDefault();
+      setDeleteIndex(index);
+    },300);
+
     console.log(index)
     
   };
@@ -27,13 +26,10 @@ export default function Todo({
 
   return (
     <div className="todo">
-      
       <p className={todo.done ? "done" : "notDone"} onClick={markAsDone}>
         {todo.title}
       </p>
-      <button className="buttond" onMouseOver={(event)=>{event.target.innerHTML="X"}} onMouseLeave={(event)=>{event.target.innerHTML=""}}  onClick={removeToDo }></button>{" "}
-      
-
+      <button className="buttond" onMouseOver={(event)=>{event.target.innerHTML="X"}} onMouseLeave={(event)=>{event.target.innerHTML=""}}  onClick={removeToDo }></button>
     </div>
   );
 }
