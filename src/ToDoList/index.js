@@ -1,12 +1,11 @@
 import Todo from "../Todo";
+import './style.css';
 
 const ToDoList = ({ todos, setDeleteIndex, setCompleteIndex }) => {
 
-
   return (
     
-    <div>
-    
+    <div className="todos-container">
       {todos.map((todo, index) => {
         return (
           <Todo
