@@ -28,6 +28,9 @@ function App() {
         setDeleteIndex={(index) => removeTask(index)}
         setCompleteIndex={(index) => markAsDone(index)}
       />
+      <h1>THE</h1>
+      <h1>AMAZING</h1>
+      <h1>TO-DO-LIST</h1>
     </div>
   );
 }
