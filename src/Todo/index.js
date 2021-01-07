@@ -7,21 +7,21 @@ export default function Todo({
   setCompleteIndex,
 }) {
   const removeToDo = (event) => {
-    let x =event.target.parentNode;
-    x.classList.add("x");
+    event.target.parentNode.classList.add("opacity");
     
     
     
     setTimeout(() => {
       
-    
+    event.target.parentNode.classList.remove("opacity")
     event.preventDefault();
     setDeleteIndex(index);},1000);
-    // event.target.parentNode.remove();
+    console.log(index)
+    
   };
   const markAsDone = () => {
     setCompleteIndex(index);
-    console.log("Hello");
+    
   };
 
   return (
