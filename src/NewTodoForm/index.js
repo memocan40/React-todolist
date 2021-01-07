@@ -6,6 +6,7 @@ const NewTodoForm = ({ setNewTodo }) => {
     let [userInput, setUserInput] = useState("");
 
     const handleClick = userInput => (e) => {
+        
         e.preventDefault();
         const newTask = {
             

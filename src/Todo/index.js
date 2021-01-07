@@ -7,8 +7,11 @@ export default function Todo({
   setCompleteIndex,
 }) {
   const removeToDo = (event) => {
-    event.target.parentNode.style.opacity="0"
-    event.target.parentNode.style.transition="1s";
+    let x =event.target.parentNode;
+    x.classList.add("x");
+    
+    
+    
     setTimeout(() => {
       
     
@@ -27,7 +30,7 @@ export default function Todo({
       <p className={todo.done ? "done" : "notDone"} onClick={markAsDone}>
         {todo.title}
       </p>
-      <button className="buttond" onClick={removeToDo }></button>{" "}
+      <button className="buttond" onMouseOver={(event)=>{event.target.innerHTML="X"}} onMouseLeave={(event)=>{event.target.innerHTML=""}}  onClick={removeToDo }></button>{" "}
       
     </div>
   );

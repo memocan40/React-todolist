@@ -26,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>THE AMAZING TODO-LIST</h1>
       <NewTodoForm setNewTodo={(newToDo) => updateTodo(newToDo)} />
       <ToDoList
       
@@ -33,9 +34,7 @@ function App() {
         setDeleteIndex={removeTask}
         setCompleteIndex={markAsDone}
       />
-      <h1>THE</h1>
-      <h1>AMAZING</h1>
-      <h1>TO-DO-LIST</h1>
+      
     </div>
   );
 }
