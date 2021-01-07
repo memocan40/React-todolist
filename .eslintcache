@@ -1,2 +1,1 @@
 [{"/Users/montaseramro/code/WBS-SCHOOL/todo-list-react/src/ToDoList/index.js":"1"},{"size":637,"mtime":1610027800046,"results":"2","hashOfConfig":"3"},{"filePath":"4","messages":"5","errorCount":0,"warningCount":1,"fixableErrorCount":0,"fixableWarningCount":0,"source":null},"38coz9","/Users/montaseramro/code/WBS-SCHOOL/todo-list-react/src/ToDoList/index.js",["6"],{"ruleId":"7","severity":1,"message":"8","line":2,"column":17,"nodeType":"9","messageId":"10","endLine":2,"endColumn":25},"no-unused-vars","'useState' is defined but never used.","Identifier","unusedVar"]
-
