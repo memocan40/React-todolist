@@ -5,8 +5,9 @@ const NewTodoForm = ({ setNewTodo }) => {
     
     let [userInput, setUserInput] = useState("");
 
-    const handleClick = userInput => (e) => {
-        
+
+    const handleClick =  (e) => {
+
         e.preventDefault();
         const newTask = {
             
@@ -21,8 +22,10 @@ const NewTodoForm = ({ setNewTodo }) => {
 
     return (
         <form>
+
             <input className="inputfield" value={userInput} placeholder="Add a new task" onChange={(e) => setUserInput(e.target.value) }></input>
             <button onClick={handleClick(userInput)}>Add</button>
+
         </form>
     )
 }

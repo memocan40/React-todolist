@@ -11,28 +11,28 @@ function App() {
   };
 
   const removeTask = (index) => {
-    console.log("before", todos);
     todos.splice(index, 1);
     setTodos([...todos]);
-    console.log("After", todos);
   };
 
   const markAsDone = (index) => {
     todos[index].done = todos[index].done ? false : true;
     setTodos([...todos]);
-    console.log(todos);
-    console.log(index);
   };
 
   return (
     <div className="App">
+
       <h1>THE AMAZING TODO-LIST</h1>
-      <NewTodoForm setNewTodo={(newToDo) => updateTodo(newToDo)} />
+     
+
+      <NewTodoForm setNewTodo={updateTodo} />
+
       <ToDoList
       
         todos={todos}
-        setDeleteIndex={removeTask}
-        setCompleteIndex={markAsDone}
+        setDeleteIndex={(index) => removeTask(index)}
+        setCompleteIndex={(index) => markAsDone(index)}
       />
       
     </div>

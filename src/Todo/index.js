@@ -6,6 +6,7 @@ export default function Todo({
   setDeleteIndex,
   setCompleteIndex,
 }) {
+
   const removeToDo = (event) => {
     event.target.parentNode.classList.add("opacity");
     
@@ -32,6 +33,7 @@ export default function Todo({
       </p>
       <button className="buttond" onMouseOver={(event)=>{event.target.innerHTML="X"}} onMouseLeave={(event)=>{event.target.innerHTML=""}}  onClick={removeToDo }></button>{" "}
       
+
     </div>
   );
 }
