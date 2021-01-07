@@ -6,22 +6,13 @@ export default function Todo({
   setDeleteIndex,
   setCompleteIndex,
 }) {
-  const removeToDo = (event) => {
-    event.preventDefault();
-    setDeleteIndex(index);
-    // event.target.parentNode.remove();
-  };
-  const markAsDone = () => {
-    setCompleteIndex(index);
-    console.log("Hello");
-  };
 
   return (
     <div className="todo">
-      <p className={todo.done ? "done" : "notDone"} onClick={markAsDone}>
+      <p className={todo.done ? "done" : "notDone"} onClick={() => setCompleteIndex(index)}>
         {todo.title}
       </p>
-      <button onClick={removeToDo}>X</button>{" "}
+      <button onClick={() => setDeleteIndex(index)}>X</button>{" "}
     </div>
   );
 }
