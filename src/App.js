@@ -33,6 +33,9 @@ function App() {
         setDeleteIndex={removeTask}
         setCompleteIndex={markAsDone}
       />
+      <h1>THE</h1>
+      <h1>AMAZING</h1>
+      <h1>TO-DO-LIST</h1>
     </div>
   );
 }
